@@ -30,7 +30,7 @@ def time_wrapper(met):
     """
     if activated:
         def wrapped_method(*args, **kwargs):
-            print(f'Starting method: {met.__name__}')  # Mostra nome da função
+            print(f'Starting method: {str(met.__name__) }')  # Mostra nome da função
             start_time = time()  # Inicia cronômetro
             ret_val = met(*args, **kwargs)  # Executa a função original
             print(f'Method finished in {time() - start_time:.4f} seconds.')  # Mostra tempo
